@@ -61,3 +61,11 @@ body{
 #glasses{
     transition: all 0.5s;
 }
+
+
+.glass__cursor {
+    cursor: pointer;
+}
+.glass__cursor img{
+    width: 100%;
+}

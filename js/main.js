@@ -1,4 +1,4 @@
-let dataGlasses = [
+const dataGlasses = [
   {
     id: "G1",
     src: "./img/g1.jpg",
@@ -97,4 +97,31 @@ let dataGlasses = [
   },
 ];
 
-console.log(dataGlasses[0].virtualImg);
+
+
+
+
+let showGlass = () => {
+  let comboGlass = "";
+  for (let i = 0; i < dataGlasses.length; i++) {
+
+    comboGlass += `
+  <div class="col-4 glass__cursor" onclick=testGlass('${dataGlasses[i].virtualImg}')>
+    <img  src='${dataGlasses[i].src}' alt="">
+</div>`
+  }
+
+  document.getElementById("vglassesList").innerHTML = comboGlass;
+};
+
+showGlass();
+
+
+let testGlass = (x) => {
+
+  document.getElementById('avatar').innerHTML = `
+  <img  src='${x}' alt="">
+  `
+}
+
+window.testGlass = testGlass;
